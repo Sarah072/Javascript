@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleAuthor.css">
+</head>
+<body class="body">
+  <div class="sidenav">
+    <a href="http://127.0.0.1:5501/index.html">Home</a>
+    <a href="#">About</a>
+    <a href="#">Help</a>
+    <a href="#scrollBooks">Books</a>
+    <a href="#scrollAuthor">Authors</a>
+    <a href="#scrollPub">Publishers</a>
+    
+  </div>
+  
+  
+<div id="scrollBooks" class="firstDiv">
+<div class="books">
+    <h2>Books</h2>
+  </div>
+    <table id="BooksID">
+      <tr>
+        <th>Book</th>
+        <th>Author</th>
+        <th>Publisher</th>
+        <th>Publishing Date</th>
+      </tr>
+      <tr>
+        <td>Don Quixote</td>
+        <td>Miguel de Cervantes’s</td>
+        <td>Fast Company</td>
+        <td>01/02/2002</td>
+      </tr>
+      <tr>
+        <td>Invisible Man</td>
+        <td>Ralph Ellison’s</td>
+        <td>Macmillan Education</td>
+        <td>23/03/1997</td>
+      </tr>
+      <tr>
+        <td>A Passage to India</td>
+        <td>E.M. Forster</td>
+        <td>John Wiley</td>
+        <td>17/12/1879</td>
+      </tr>
+    </table>
+    
+    <div class="buttons">
+      <div>
+        <a><button class="ad" onclick="popUpAdd()">Add Book</button></a>
+       </div>
+       <div>
+        <a><button class="hb" onclick="popUpDelete()">Delete Book</button></a>
+       </div>
+       <div>
+        <a><button class="db" onclick="popUpUpdate()">Update Book</button></a>
+       </div>
+      
+    </div>
+<div class="manageBooks">
+    <div id="third" class="hov">
+     <h3>Delete Book</h3>
+        <form>
+          <label for="fname">Book Name:</label><br>
+          <input type="text" id="fname" name="fname" placeholder="Name"><br>
+          
+        </form>
+        <button class="ub" ondblclick="DeleteBook() ">Delete</button>
+
+       <p class="para" id="demo"></p>
+        
+       
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <div id="fourth" class="hov2">
+      <h3>Edit Book</h3>
+      <form class="form2">
+        <label for="bname2">Enter Book Name to Update:</label><br>
+        <input class="inp1" type="text" id="bname3" name="fname" placeholder="Name"><br>
+      </form>
+      <button class="ub" ondblclick="Enter()">Enter</button>
+      <p class="para" id="prompt1"></p>
+      
+
+        <form class="form1">
+          <label for="bname">Book Name:</label><br>
+          <input class="inp1" type="text" id="bname" name="fname" placeholder="Name"><br>
+          <label for="aname">Author Name:</label><br>
+          <input class="inp1" type="text" id="aname" name="fname" placeholder="Author"><br>
+          <label for="pname">Publisher Name:</label><br>
+          <input class="inp1" type="text" id="pname" name="fname" placeholder="Publisher"><br>
+          <label for="pd">Publishing Date:</label><br>
+          <input class="inp1" type="text" id="pd" name="fname" placeholder="mm/dd/yyyy"><br>
+          
+        </form>
+        <button class="ub" ondblclick="UpdateInfo()">Update</button>
+        <p class="para" id="prompt2"></p>
+    </div>
+
+
+    <div id="fifth" class="hov4">
+      <h3>Add Book</h3>
+
+        <form class="form1">
+          <label for="bname2">Book Name:</label><br>
+          <input class="inp1" type="text" id="bname2" name="fname" placeholder="Name"><br>
+          <label for="aname2">Author Name:</label><br>
+          <input class="inp1" type="text" id="aname2" name="fname" placeholder="Author"><br>
+          <label for="pname2">Publisher Name:</label><br>
+          <input class="inp1" type="text" id="pname2" name="fname" placeholder="Publisher"><br>
+          <label for="pd2">Publishing Date:</label><br>
+          <input class="inp1" type="text" id="pd2" name="fname" placeholder="mm/dd/yyyy"><br>
+          
+        </form>
+        <button class="ub" ondblclick="addBook()">Add</button>
+        <p class="para" id="prompt3"></p>
+        <script type="text/javascript" src="script.js"></script>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="script.js"></script>
+
+<div id="scrollAuthor" class="firstDiv">
+<div class="authors">
+  <h2>Authors</h2>
+</div>
+
+ <table id="authors">
+  
+   <tr>
+     <th>Author</th>
+     <th>Book</th>
+   </tr>
+   <tr>
+   
+        <td>Miguel de Cervantes’s</td>
+        <td>Don Quixote</td>
+    
+   </tr>
+   <tr>
+   
+    <td>Ralph Ellison’s</td>
+    <td>Invisible Man</td>
+   </tr>
+   <tr>
+   
+    <td>E.M. Forster</td>
+    <td>A Passage to India</td>
+   </tr>
+ </table>
+ 
+ <div class="buttons">
+   
+    <div>
+      <a><button class="hb2" onclick="popUpDeleteAuthor()">Delete Author</button></a>
+  </div>
+   
+ </div>
+
+ <div id="third4" class="hov3">
+    
+    <form>
+      <label for="fname1">Author Name to Delete:</label><br>
+      <input type="text" id="fname1" name="fname1"><br>
+    </form>
+    <button class="ub" onclick = "DeleteAuthor()">DeleteAuthor</button>
+
+    <p class="para" id="demo2"></p>
+  </div>
+
+  
+</div>
+<div id="scrollPub" class="firstDiv">
+  <div class="authors">
+    <h2>Publishers</h2>
+  </div>
+
+<table id="publishers">
+  <tr>
+   
+    <th>Publisher</th>
+    <th>Book</th>
+  </tr>
+  <tr>
+   
+    
+    <td>Fast Company</td>
+    <td>Don Quixote</td>
+  </tr>
+  <tr>
+   
+    
+    <td>Macmillan Education</td>
+    <td>Invisible Man</td>
+  </tr>
+  <tr>
+   
+    
+    <td>John Wiley</td>
+    <td>A Passage to India</td>
+  </tr>
+</table>
+
+<div class="buttons">
+   <div>
+    <a><button class="hb2" onclick="popUpDeletePublisher()">Delete Publisher</button></a>
+  </div>
+ 
+</div>
+
+<div id="third3" class="hov3">
+   
+     <form>
+       <label for="fname2">Publisher Name to Delete:</label><br>
+       <input type="text" id="fname2" name="fname2"><br>
+       
+     </form>
+     <button class="ub" onclick = "DeletePublisher()">Submit</button>
+     <p class="para" id="demo3"></p>
+</div>
+
+</div>
+   
+</body>
+</html>
